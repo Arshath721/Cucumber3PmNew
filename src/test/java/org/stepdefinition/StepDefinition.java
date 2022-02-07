@@ -22,7 +22,7 @@ public class StepDefinition extends UtilityBaseClass {
 	@When("User enter invalid username and invalid password")
 	public void user_enter_invalid_username_and_invalid_password(DataTable d) {
 
-		WebElement username = driver.findElement(By.id("email"));
+		WebElement username = driver.findElement(By.id("mail"));
 		WebElement password = driver.findElement(By.id("pass"));
 
 		List<Map<String, String>> maps = d.asMaps();
@@ -39,7 +39,7 @@ public class StepDefinition extends UtilityBaseClass {
 
 	@When("User click login button")
 	public void user_click_login_button() throws InterruptedException {
-		WebElement loginBtn = driver.findElement(By.name("login"));
+		WebElement loginBtn = driver.findElement(By.name("ogin"));
 		loginBtn.click();
 		Thread.sleep(3000);
 		System.out.println("data table scenario");
